@@ -1,0 +1,42 @@
+
+// ---- sidebar ----
+
+.page-with-sidebar .sidebar-wrapper {
+  background-color: @color-39 !important;
+  border-color: @color-59 !important;
+
+  // -- sidebar nav links --
+  .nav-sidebar li > a {
+    border-right: 1px solid transparent;
+    font-weight: 600;
+
+    &, & > i {
+      color: @color-147;
+    }
+
+    &:hover {
+    	background: @color-29;
+    	border-right: 1px solid @color-59;
+      color: white;
+    }
+
+    // -- sidebar nav count badge --
+    .count {
+      background: @color-29;
+    }
+    &:hover .count {
+      background: rgb(0,0,0);
+    }
+  }
+
+  // -- sidebar collapse trigger/button --
+  .collapse-nav > a {
+    background: @color-59;
+    color: @color-147;
+
+    &:hover {
+      background: @color-98;
+      color: white;
+    }
+  }
+}

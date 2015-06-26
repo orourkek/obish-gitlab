@@ -1,0 +1,49 @@
+
+// ---- header ----
+
+header.navbar-gitlab .container {
+  background: @color-ob-blue;
+  border-color: @color-79;
+
+  // -- app logo (in sidebar) --
+  .app_logo {
+    background: @color-39 !important;
+    border-right: 1px solid @color-59;
+
+    &:hover {
+      background: @color-29 !important;
+    }
+  }
+
+  // -- page title/heading --
+  .title {
+    &, & a {
+      color: white;
+    }
+  }
+
+  // -- nav links --
+  .nav > li > a {
+    color: @color-98;
+
+    &:hover {
+      color: hsl(208, 63%, 83%);
+  	}
+  }
+
+  // -- search input --
+  .search .search-input {
+    background-color: transparent;
+    border-color: @color-69;
+    color: hsl(240, 4%, 50%);
+    font-weight: normal;
+
+    &:focus {
+      background-color: @color-59;
+      border-color: @color-98;
+      outline: none;
+      box-shadow: 0 0 6px rgba(0,0,0,.2);
+      color: white;
+    }
+  }
+}

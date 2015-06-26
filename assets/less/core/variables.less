@@ -1,0 +1,75 @@
+
+// Colors
+// --------------------------------
+
+@color-ob-blue: rgb(49,49,59); //hsl(240, 17%, 23%);
+@color-ob-highlight: rgb(184,213,239);
+
+@color-0: black;
+@color-19: multiply(@color-ob-blue, rgb(100,100,100)); // ~~131317
+@color-29: multiply(@color-ob-blue, rgb(160,160,160)); // ~~1f1f25
+@color-39: multiply(@color-ob-blue, rgb(200,200,200)); // ~~26262e
+@color-49: @color-ob-blue; // ~~31313b
+@color-59: screen(@color-ob-blue, rgb(14,14,12)); // ~~3c3c44
+@color-69: screen(@color-59, rgb(13,13,13)); // ~~46464e
+@color-79: screen(@color-69, rgb(12,12,14));; // ~~4f4f57
+@color-98: lighten(@color-79, 8%); // ~~62626d
+@color-147: lighten(@color-98, 18%); // ~~90909b
+@color-196: lighten(@color-147, 20%); // ~~c6c6cb
+
+@color-success: hsl(110, 30%, 42%);
+@color-success-active: hsl(110, 35%, 50%);
+@color-warning: hsl(32, 55%, 48%);
+@color-warning-active: hsl(32, 75%, 55%);
+@color-danger: hsl(5, 45%, 45%);
+@color-danger-active: hsl(5, 55%, 55%);
+
+// Buttons
+// --------------------------------
+
+@btn-default-bg: @color-79;
+@btn-default-color: white;
+@btn-default-hover-bg: @color-98;
+@btn-success-bg: @color-success;
+@btn-success-color: white;
+@btn-success-hover-bg: @color-success-active;
+@btn-warning-bg: @color-warning;
+@btn-warning-color: white;
+@btn-warning-hover-bg: @color-warning-active;
+@btn-danger-bg: @color-danger;
+@btn-danger-color: white;
+@btn-danger-hover-bg: @color-danger-active;
+
+
+// Misc
+// --------------------------------
+
+@base-border-radius: 3px;
+
+/*/
+
+@color-19: rgb(19,19,29);
+@color-29: rgb(29,29,39);
+@color-39: rgb(39,39,49);
+@color-49: @color-ob-blue; // ~~31313b
+@color-59: rgb(59,59,69);
+@color-69: rgb(69,69,79);
+@color-79: rgb(79,79,89);
+
+@color-98: rgb(98,98,108);
+@color-147: rgb(147,147,157);
+@color-196: rgb(196,196,206);
+
+
+#color-19 { color: @color-19; rgb: red(@color-19), green(@color-19), blue(@color-19); }
+#color-29 { color: @color-29; rgb: red(@color-29), green(@color-29), blue(@color-29); }
+#color-39 { color: @color-39; rgb: red(@color-39), green(@color-39), blue(@color-39); }
+#color-49 { color: @color-49; rgb: red(@color-49), green(@color-49), blue(@color-49); }
+#color-59 { color: @color-59; rgb: red(@color-59), green(@color-59), blue(@color-59); }
+#color-69 { color: @color-69; rgb: red(@color-69), green(@color-69), blue(@color-69); }
+#color-79 { color: @color-79; rgb: red(@color-79), green(@color-79), blue(@color-79); }
+#color-98 { color: @color-98; rgb: red(@color-98), green(@color-98), blue(@color-98); }
+#color-147 { color: @color-147; rgb: red(@color-147), green(@color-147), blue(@color-147); }
+#color-196 { color: @color-196; rgb: red(@color-196), green(@color-196), blue(@color-196); }
+
+//*/

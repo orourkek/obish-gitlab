@@ -1,0 +1,49 @@
+
+#input-style() {
+  background-color: transparent;
+  border-color: rgba(255,255,255,.1);
+  color: rgba(255,255,255,.25);
+  font-weight: normal;
+  border-radius: @base-border-radius;
+
+  &:focus {
+    background-color: rgba(255,255,255,.05);
+    border-color: rgba(255,255,255,.2);
+    outline: none;
+    box-shadow: 0 0 6px rgba(0,0,0,.2);
+    color: white;
+  }
+}
+
+// ---- form "actions" ----
+.form-actions {
+	background: @color-39;
+  border-top: 1px solid @color-98;
+}
+
+// ---- inputs ----
+input.form-control,
+textarea.form-control {
+  #input-style();
+}
+
+// ---- legends ----
+legend,
+fieldset > legend {
+  color: @color-196;
+  border-color: @color-79;
+}
+
+// ---- labels ----
+label,
+.control-label {}
+
+// ---- input groups ----
+.input-group {
+
+  .input-group-addon {
+    background-color: @color-29;
+    color: @color-79;
+    border-color: rgba(255,255,255,.1);
+  }
+}

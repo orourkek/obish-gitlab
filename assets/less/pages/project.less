@@ -1,0 +1,42 @@
+
+// ---- clone repository box ----
+.git-clone-holder {
+
+  .git-protocols {
+    background: transparent;
+
+    // -- protocol buttons --
+    .input-group-btn {
+      .btn {
+        background: @color-ob-blue;
+        color: @color-98;
+
+        &:hover {
+          color: @color-196;
+        }
+
+        &.active {
+          background: @color-69;
+          color: @color-196;
+        }
+      }
+    }
+  }
+
+  // -- repo clone url --
+  #project_clone {
+  	#input-style();
+    margin-left: -2px;
+  }
+}
+
+// ---- project visibility ----
+.project-visibility-level-holder {
+  .radio {
+
+    // -- subheading --
+    .option-descr {
+      color: @color-98;
+    }
+  }
+}

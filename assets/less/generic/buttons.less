@@ -1,0 +1,86 @@
+
+@hover-states: ~'&:hover, &:focus, &.focus, &:active, &.active';
+
+.btn {
+  border: none;
+  box-shadow: 0 1px 0 rgba(0,0,0,.4);
+  border-radius: @base-border-radius;
+
+  &:hover {
+    box-shadow: 0 1px 0 rgba(0,0,0,.8);
+  }
+
+  // ---- default, primary ----
+  &,
+  &.btn-default,
+  &.btn-primary {
+    background: @color-79;
+    color: white;
+
+    &:hover, &:focus, &.focus, &:active, &.active {
+      background: @color-98;
+      color: white;
+    }
+  }
+
+  // ---- save, success ----
+  &.btn-save,
+  &.btn-success,
+  &.btn-save.commits-compare-switch {
+  	background: @color-success;
+    color: white;
+
+    &:hover, &:focus, &.focus, &:active, &.active {
+      background: @color-success-active;
+    }
+  }
+
+  // ---- warning ----
+  &.btn-warning {
+    background: @color-warning;
+    color: white;
+
+    &:hover, &:focus, &.focus, &:active, &.active,
+    .open > &.dropdown-toggle {
+       background: @color-warning-active;
+    }
+  }
+
+  // ---- danger, remove ----
+  &.btn-danger,
+  &.btn-remove,
+  &.btn-remove.commits-compare-switch {
+  	background: @color-danger;
+    color: white;
+
+    &:hover, &:focus, &.focus, &:active, &.active,
+    .open > &.dropdown-toggle {
+      background: @color-danger-active;
+    }
+  }
+}
+
+// ---- button groups ----
+.btn-group {
+
+  // -- "open" state (e.g. dropdowns) --
+  &.open {
+    .btn,
+    .btn:hover,
+    .dropdown-toggle,
+    .dropdown-toggle:hover {
+      background: @color-ob-highlight;
+      color: @color-ob-blue;
+    }
+  }
+}
+
+
+
+
+
+//  input group buttons
+.content-wrapper .input-group-btn .btn {
+	box-shadow: none;
+  border: 1px solid @color-69;
+}

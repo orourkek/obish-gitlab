@@ -1,0 +1,17 @@
+{
+  "name": "obish-gitlab",
+  "version": "0.1.0",
+  "description": "",
+  "author": "Kevin O'Rourke <kevin@korourke.net>",
+
+  "devDependencies": {
+    "less": "latest",
+    "less-plugin-clean-css": "latest",
+    "chokidar-cli": "latest"
+  },
+
+  "scripts": {
+    "build-css": "lessc --source-map assets/less/ob-gitlab.less assets/css/ob-gitlab.css",
+    "watch-css": "npm run build-css; chokidar assets/less/**/*.less -c 'npm run build-css'"
+  }
+}
