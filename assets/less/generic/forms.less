@@ -23,8 +23,17 @@
 
 // ---- inputs ----
 input.form-control,
-textarea.form-control {
+textarea.form-control,
+textarea.markdown-area {
   #input-style();
+}
+
+::-webkit-input-placeholder,
+:-moz-placeholder,
+::-moz-placeholder,
+::input-placeholder,
+:input-placeholder {
+  color: @color-79 !important;
 }
 
 // ---- legends ----

@@ -12,6 +12,6 @@
 
   "scripts": {
     "build-css": "lessc --source-map assets/less/ob-gitlab.less assets/css/ob-gitlab.css",
-    "watch-css": "npm run build-css; chokidar assets/less/**/*.less -c 'npm run build-css'"
+    "watch-css": "npm run build-css; chokidar assets/less/**/*.less assets/less/*.less -c 'npm run build-css'"
   }
 }

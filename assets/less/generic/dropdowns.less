@@ -17,21 +17,25 @@
 }
 
 // ---- select (dropdown) ----
-.select2-container {
+// (uses !important to override an !important from the GitLab css)
+.select2-container,
+.select2-container.select2-default {
   .select2-choice {
     background: @color-79;
-    color: white;
+    color: @color-147 !important;
+    text-shadow: none;
     border: none;
     box-shadow: 0 1px 0 rgba(0,0,0,.4);
 
     &:hover {
-      background: @color-98;
-      box-shadow: 0 1px 0 rgba(0,0,0,.8);
+      background: @color-79;
+      color: @color-196 !important;
     }
+
     .select2-dropdown-open&,
     .select2-dropdown-open& .select2-arrow {
-      background: @color-ob-highlight;
-      color: @color-ob-blue;
+      background: @color-98;
+      color: white !important;
       box-shadow: 0 1px 0 rgba(0,0,0,.8);
     }
 

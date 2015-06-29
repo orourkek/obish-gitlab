@@ -12,11 +12,17 @@ header.navbar-gitlab .title {
 
 // ---- links ----
 a {
-  color: darken(@color-ob-highlight,12%);
+  color: @link-color;
 
   &:hover {
-    color: @color-ob-highlight;
+    color: @link-hover-color;
   }
+}
+
+// ---- code ----
+code {
+  background-color: @color-29;
+  color: @color-warning;
 }
 
 // ---- help block ----

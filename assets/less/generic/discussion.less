@@ -1,0 +1,60 @@
+
+
+.common-note-form {
+  background: @color-39;
+  border-color: @color-69;
+
+  .note-form-actions {
+    background:transparent;
+  }
+
+  // "comments are parsed with GitLab flavored markdown..."
+  .comment-hints {
+    background: @color-69;
+    border-color: @color-69;
+    color: @color-147;
+  }
+}
+
+
+
+ul.notes {
+  .discussion-header,
+  .note-header {
+
+    // -- role indicator (e.g. "developer")--
+    .note-role {
+      background-color: @color-success;
+      border-color: @color-success;
+      color: white;
+    }
+
+    // -- author name --
+    .author {
+      color: @link-color;
+      font-weight: normal;
+
+      &:hover {
+        color: @link-hover-color;
+      }
+    }
+  }
+
+  .note-body {
+
+    .note-text {
+      color: @color-196;
+    }
+  }
+
+  .discussion {
+    .discussion-actions a,
+    .note-actions a {
+      color: @color-98;
+
+      &:hover {
+        color: @color-147;
+      }
+    }
+  }
+}

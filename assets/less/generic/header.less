@@ -31,19 +31,28 @@ header.navbar-gitlab .container {
   	}
   }
 
-  // -- search input --
-  .search .search-input {
-    background-color: transparent;
-    border-color: @color-69;
-    color: hsl(240, 4%, 50%);
-    font-weight: normal;
 
-    &:focus {
-      background-color: @color-59;
-      border-color: @color-98;
-      outline: none;
-      box-shadow: 0 0 6px rgba(0,0,0,.2);
-      color: white;
+  .search {
+    margin-top: 0;
+
+    // -- search input --
+    .search-input {
+      height: 46px;
+      padding-left: 30px;
+      border: none;
+      border-radius: 0;
+      opacity: .75;
+      background-color: transparent;
+      color: hsl(240, 4%, 50%);
+      font-weight: normal;
+
+      &:focus {
+        opacity: 1;
+        background-color: @color-69;
+        outline: none;
+        box-shadow: 0 0 6px rgba(0,0,0,.2);
+        color: white;
+      }
     }
   }
 }

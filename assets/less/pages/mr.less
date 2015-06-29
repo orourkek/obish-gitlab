@@ -1,0 +1,50 @@
+
+.mr-state-widget {
+  background: @color-39;
+  color: @color-147;
+  border: none;
+}
+
+.timeline {
+
+  // -- timeline "line" --
+  &::before {
+    background-color: @color-39;
+  }
+
+  // chat bubble like things
+  .timeline-entry {
+    .timeline-entry-inner {
+      .timeline-content {
+        background: @color-39;
+        color: @color-147;
+
+        &::after {
+          border-right-color: @color-39;
+        }
+      }
+
+      .timeline-icon {
+        background: @color-39;
+        box-shadow: 0 0 0 3px @color-29;
+      }
+    }
+  }
+
+  .system-note {
+    .timeline-entry-inner {
+      .timeline-content {
+        background: none;
+      }
+
+      .timeline-icon {
+        background: transparent;
+        box-shadow: none;
+
+        span {
+          color: @color-39;
+        }
+      }
+    }
+  }
+}

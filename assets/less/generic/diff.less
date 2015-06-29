@@ -1,0 +1,43 @@
+
+@diff-bg: @color-59;
+@diff-color: @color-147;
+@diff-border: @color-79;
+
+.diff-file {
+  border: 1px solid @diff-border;
+
+  .diff-header {
+    background: @diff-bg;
+    border-color: @diff-border;
+    color: @diff-color;
+  }
+
+  .diff-content {
+    //background: @color-196;
+
+    .line_content {
+      &.new {
+        //background: screen(@color-49, #000a00);
+      }
+    }
+  }
+
+  .notes_holder {
+    td.notes_line,
+    td.notes_content {
+      border-color: @diff-border;
+      border-width: 1px;
+      background: @diff-bg;
+    }
+
+    // -- comment icon & count (on left) --
+    .notes_line {
+      color: @color-147;
+    }
+  }
+
+  .discussion-reply-holder {
+    border-color: @diff-border;
+    background: @diff-bg;
+  }
+}
