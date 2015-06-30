@@ -9,11 +9,13 @@
 @import 'generic/forms';
 @import 'generic/git-things';
 @import 'generic/header';
+@import 'generic/labels';
 @import 'generic/navs';
 @import 'generic/scaffolding';
 @import 'generic/sidebar';
 @import 'generic/typography';
 
+@import 'pages/commit';
 @import 'pages/dashboard';
 @import 'pages/mr';
 @import 'pages/project';
@@ -25,12 +27,12 @@
 .content-wrapper hr,
 ul.bordered-list li
 {
-  border-color: @color-59;
+  border-color: @border-subtle-color;
 }
 //  LESS SUBTLE borders & dividers
 .content-wrapper .project-home-panel,
 .readme-holder .readme-file-title {
-  border-color: @color-79;
+  border-color: @border-normal-color;
 }
 
 // ---- timeline event items ----

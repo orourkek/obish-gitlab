@@ -1,8 +1,8 @@
 
-
 .common-note-form {
   background: @color-39;
   border-color: @color-69;
+  padding: 1em;
 
   .note-form-actions {
     background:transparent;
@@ -13,6 +13,22 @@
     background: @color-69;
     border-color: @color-69;
     color: @color-147;
+  }
+
+  .nav.nav-tabs {
+    > li {
+      > a {
+        border-bottom-color: transparent;
+      }
+    }
+  }
+}
+
+.new_note,
+.edit_note {
+  .note_text {
+    padding: 1em;
+    border-radius: 0;
   }
 }
 
@@ -31,12 +47,8 @@ ul.notes {
 
     // -- author name --
     .author {
-      color: @link-color;
+      #link-colors();
       font-weight: normal;
-
-      &:hover {
-        color: @link-hover-color;
-      }
     }
   }
 

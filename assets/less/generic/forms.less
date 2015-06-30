@@ -22,19 +22,21 @@
 }
 
 // ---- inputs ----
+input,
+textarea,
 input.form-control,
 textarea.form-control,
 textarea.markdown-area {
   #input-style();
+
+  &::-webkit-input-placeholder { color: @color-79 !important; }
+  &:-moz-placeholder { color: @color-79 !important; }
+  &::-moz-placeholder { color: @color-79 !important; }
+  &::input-placeholder { color: @color-79 !important; }
+  &:input-placeholder { color: @color-79 !important; }
 }
 
-::-webkit-input-placeholder,
-:-moz-placeholder,
-::-moz-placeholder,
-::input-placeholder,
-:input-placeholder {
-  color: @color-79 !important;
-}
+
 
 // ---- legends ----
 legend,

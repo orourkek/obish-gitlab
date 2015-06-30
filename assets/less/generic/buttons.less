@@ -13,50 +13,61 @@
   // ---- default, primary ----
   &,
   &.btn-default,
-  &.btn-primary {
-    background: @color-79;
-    color: white;
+  &.btn-primary,
+  .commits-compare-switch {
+    #button-style(
+      @color-79,
+      white,
+      @color-98,
+      @color-29
+    );
 
-    &:hover, &:focus, &.focus, &:active, &.active {
-      background: @color-98;
-      color: white;
+    &:active, &.active {
+      box-shadow: none;
+    }
+
+    // -- current active btn-group btn --
+    // (just `.active`, not `:active`)
+    .btn-group &.active,
+    .diff-btn-group &.active {
+      background: @color-ob-highlight;
+      color: @color-49;
     }
   }
 
   // ---- save, success ----
   &.btn-save,
   &.btn-success,
+  &.comment-btn,
   &.btn-save.commits-compare-switch {
-  	background: @color-success;
-    color: white;
-
-    &:hover, &:focus, &.focus, &:active, &.active {
-      background: @color-success-active;
-    }
+    #button-style(
+      @color-success,
+      white,
+      @color-success-active,
+      darken(@color-success, 20%)
+    );
   }
 
   // ---- warning ----
   &.btn-warning {
-    background: @color-warning;
-    color: white;
-
-    &:hover, &:focus, &.focus, &:active, &.active,
-    .open > &.dropdown-toggle {
-       background: @color-warning-active;
-    }
+    #button-style(
+      @color-warning,
+      white,
+      @color-warning-active,
+      darken(@color-warning, 20%)
+    );
   }
 
   // ---- danger, remove ----
   &.btn-danger,
   &.btn-remove,
   &.btn-remove.commits-compare-switch {
-  	background: @color-danger;
-    color: white;
-
-    &:hover, &:focus, &.focus, &:active, &.active,
-    .open > &.dropdown-toggle {
-      background: @color-danger-active;
-    }
+    #button-style(
+      @color-danger,
+      white,
+      @color-danger-active,
+      darken(@color-danger, 20%)
+    );
   }
 }
 

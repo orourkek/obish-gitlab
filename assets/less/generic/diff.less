@@ -1,23 +1,112 @@
 
-@diff-bg: @color-59;
+@diff-frame-bg: @color-39;
+@diff-content-bg: @color-49;
 @diff-color: @color-147;
-@diff-border: @color-79;
+@diff-border-color: @color-69;
 
+// ---- file diff ----
 .diff-file {
-  border: 1px solid @diff-border;
+  border: 1px solid @diff-border-color;
 
+  // -- diff frame header --
   .diff-header {
-    background: @diff-bg;
-    border-color: @diff-border;
+    background: @diff-frame-bg;
+    border-color: @diff-border-color;
     color: @diff-color;
   }
 
   .diff-content {
-    //background: @color-196;
+    background: @diff-content-bg;
 
+    // -- diff line content (the code) --
     .line_content {
+      color: @diff-color;
+
+      &.matched {
+        background: @diff-content-bg;
+        color: @color-79;
+      }
+
       &.new {
         //background: screen(@color-49, #000a00);
+        background: @color-diff-new;
+        color: white;
+      }
+
+      &.old {
+        background: @color-diff-old;
+        color: white;
+      }
+    }
+
+    // -- line wrapper --
+    tr.line_holder {
+
+      // -- old (removed) line --
+      &.old {
+        .old_line,
+        .new_line {
+          background: @color-diff-old-bright;
+          border-color: darken(@color-diff-old, 10%);
+
+          a {
+            color: white;
+          }
+        }
+
+        // -- diff word highlight --
+        .idiff {
+          //background: rgba(100,255,100,.2);
+          background: lighten(saturate(@color-diff-old, 10%), 25%);
+        }
+      }
+
+      // -- new (added) line --
+      &.new {
+        .old_line,
+        .new_line {
+          background: @color-diff-new-bright;
+          border-color: darken(@color-success, 15%);
+
+          a {
+            color: white;
+          }
+        }
+
+        // -- diff word highlight --
+        .idiff {
+          //background: rgba(100,255,100,.2);
+          background: lighten(saturate(@color-diff-new, 10%), 25%);
+        }
+      }
+
+      // -- row hover highlight --
+      // note: uses !important to override !important in GitLab css
+      &:hover {
+        > td.line_content {
+          background: @color-69 !important;
+          color: white !important;
+        }
+        > td.new_line,
+        > td.old_line {
+          background: @color-79 !important;
+          border-color: @color-98 !important;
+        }
+      }
+    }
+
+    // -- base line style (overwritten by ".new", etc) --
+    .old_line,
+    .new_line,
+    .diff-line {
+      background: @diff-frame-bg;
+      // -- expand link color ("...") --
+      color: @color-69;
+      border-color: @diff-border-color;
+
+      // -- line number color --
+      a {
+        color: @color-98;
       }
     }
   }
@@ -25,9 +114,9 @@
   .notes_holder {
     td.notes_line,
     td.notes_content {
-      border-color: @diff-border;
+      border-color: @diff-border-color;
       border-width: 1px;
-      background: @diff-bg;
+      background: @diff-frame-bg;
     }
 
     // -- comment icon & count (on left) --
@@ -37,7 +126,7 @@
   }
 
   .discussion-reply-holder {
-    border-color: @diff-border;
-    background: @diff-bg;
+    border-color: @diff-border-color;
+    background: @diff-frame-bg;
   }
 }

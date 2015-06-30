@@ -12,11 +12,7 @@ header.navbar-gitlab .title {
 
 // ---- links ----
 a {
-  color: @link-color;
-
-  &:hover {
-    color: @link-hover-color;
-  }
+  #link-colors();
 }
 
 // ---- code ----
@@ -28,4 +24,12 @@ code {
 // ---- help block ----
 .help-block {
   color: @color-98;
+}
+
+.cgreen {
+  color: @color-diff-new-bright;
+}
+
+.cred {
+  color: @color-diff-old-bright;
 }
