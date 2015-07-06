@@ -1,4 +1,95 @@
 
+body[data-page^='projects:merge_requests'],
+body[data-page^='projects:issues'] {
+  .issues-details-filters {
+    background: @color-39;
+    border-color: @color-69;
+
+    // -- sort dropdown --
+    .issues-other-filters {
+      // fix float issue
+      //.clearfix();
+    }
+  }
+
+  .issues-state-filters {
+    li.active {
+      a {
+        // -- tabs --
+        // !important overrides GitLab's !important
+        &, &:hover, &:active, &.active {
+        	background: @color-98 !important;
+          border-color: @color-98 !important;
+          color: @color-196;
+        }
+      }
+    }
+  }
+
+  // -- select boxes --
+  // !important overrides GitLab's !important
+  .issues-filters,
+  .issues_bulk_update {
+    .select2-container {
+      .select2-choice {
+        color: @color-196 !important;
+      }
+    }
+  }
+
+  .well-list {
+    li {
+      // -- row hover effect --
+      &:hover {
+        background: @color-59;
+      }
+
+      // -- row title link --
+      .row_title {
+        #link-colors();
+      }
+
+      // -- author link --
+      .author {
+        color: @color-147;
+
+        &:hover {
+          color: @color-ob-highlight;
+        }
+      }
+    }
+  }
+
+  .issue-search-form {
+    .issue_search {
+      #input-style() !important;
+    }
+  }
+
+  .merge-request, .issue {
+    // -- merged item bg --
+    &.merged {
+      background: @color-39;
+      border-color: @color-69;
+    }
+
+    // -- closed item bg --
+    &.closed {
+      background: @color-49;
+      border-color: @color-69;
+    }
+  }
+
+  .mr-list {
+    .merge-request {
+      // -- MR meta info text --
+      .merge-request-info {
+        color: @color-98;
+      }
+    }
+  }
+}
+
 .mr-state-widget {
   background: @color-39;
   color: @color-147;

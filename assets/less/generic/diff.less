@@ -30,12 +30,12 @@
       &.new {
         //background: screen(@color-49, #000a00);
         background: @color-diff-new;
-        color: white;
+        color: @color-196;
       }
 
       &.old {
         background: @color-diff-old;
-        color: white;
+        color: @color-196;
       }
     }
 
@@ -50,7 +50,7 @@
           border-color: darken(@color-diff-old, 10%);
 
           a {
-            color: white;
+            color: @color-196;
           }
         }
 
@@ -69,7 +69,7 @@
           border-color: darken(@color-success, 15%);
 
           a {
-            color: white;
+            color: @color-196;
           }
         }
 
@@ -91,6 +91,17 @@
         > td.old_line {
           background: @color-79 !important;
           border-color: @color-98 !important;
+        }
+      }
+
+      // -- add comment button --
+      .add-diff-note {
+        background: @color-147;
+        color: @color-49;
+
+        &:hover {
+          background: @color-ob-highlight;
+          color: @color-49;
         }
       }
     }

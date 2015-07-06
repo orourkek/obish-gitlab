@@ -12,7 +12,7 @@
   "content_scripts": [
     {
       "matches": ["*://gitlab.oblong.com/*"],
-      "js": ["assets/js/inject-obish-style.js"],
+      "js": ["assets/js/inject-obish.js"],
 			"all_frames": true,
       "run_at": "document_end"
     }

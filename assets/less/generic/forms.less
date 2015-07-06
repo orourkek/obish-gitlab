@@ -1,20 +1,4 @@
 
-#input-style() {
-  background-color: transparent;
-  border-color: rgba(255,255,255,.1);
-  color: rgba(255,255,255,.25);
-  font-weight: normal;
-  border-radius: @base-border-radius;
-
-  &:focus {
-    background-color: rgba(255,255,255,.05);
-    border-color: rgba(255,255,255,.2);
-    outline: none;
-    box-shadow: 0 0 6px rgba(0,0,0,.2);
-    color: white;
-  }
-}
-
 // ---- form "actions" ----
 .form-actions {
 	background: @color-39;
@@ -24,6 +8,7 @@
 // ---- inputs ----
 input,
 textarea,
+.form-control,
 input.form-control,
 textarea.form-control,
 textarea.markdown-area {
@@ -34,6 +19,22 @@ textarea.markdown-area {
   &::-moz-placeholder { color: @color-79 !important; }
   &::input-placeholder { color: @color-79 !important; }
   &:input-placeholder { color: @color-79 !important; }
+}
+
+select.form-control {
+
+	&, &:active, &.active, &:focus {
+		background: @color-79;
+		color: @color-196;
+		text-shadow: none;
+		border: none;
+		box-shadow: 0 1px 0 rgba(0,0,0,.4);
+	}
+
+	&:hover {
+		background: @color-79;
+		color: @color-196;
+	}
 }
 
 
