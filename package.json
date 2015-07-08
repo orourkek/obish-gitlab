@@ -7,7 +7,12 @@
   "devDependencies": {
     "less": "latest",
     "less-plugin-clean-css": "latest",
-    "chokidar-cli": "latest"
+    "chokidar-cli": "latest",
+    "node-sass": "latest",
+    "bootstrap-sass": "latest",
+    "font-awesome": "latest",
+    "nprogress-npm": "latest",
+    "sass-globbing": "latest"
   },
 
   "scripts": {
