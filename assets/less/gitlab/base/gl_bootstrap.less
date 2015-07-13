@@ -1,0 +1,270 @@
+/*
+ * Twitter bootstrap with GitLab customizations/additions
+ *
+ */
+
+// Core variables and mixins
+@import "@{bootstrap-path}/variables";
+@import 'gl_variables';
+@import "@{bootstrap-path}/mixins";
+
+// Reset
+@import "@{bootstrap-path}/normalize";
+@import "@{bootstrap-path}/print";
+
+// Core CSS
+@import "@{bootstrap-path}/scaffolding";
+@import "@{bootstrap-path}/type";
+@import "@{bootstrap-path}/code";
+@import "@{bootstrap-path}/grid";
+@import "@{bootstrap-path}/tables";
+@import "@{bootstrap-path}/forms";
+@import "@{bootstrap-path}/buttons";
+
+// Components
+@import "@{bootstrap-path}/component-animations";
+@import "@{bootstrap-path}/dropdowns";
+@import "@{bootstrap-path}/button-groups";
+@import "@{bootstrap-path}/input-groups";
+@import "@{bootstrap-path}/navs";
+@import "@{bootstrap-path}/navbar";
+@import "@{bootstrap-path}/breadcrumbs";
+@import "@{bootstrap-path}/pagination";
+@import "@{bootstrap-path}/pager";
+@import "@{bootstrap-path}/labels";
+@import "@{bootstrap-path}/badges";
+@import "@{bootstrap-path}/jumbotron";
+@import "@{bootstrap-path}/thumbnails";
+@import "@{bootstrap-path}/alerts";
+@import "@{bootstrap-path}/progress-bars";
+@import "@{bootstrap-path}/list-group";
+@import "@{bootstrap-path}/wells";
+@import "@{bootstrap-path}/close";
+@import "@{bootstrap-path}/panels";
+
+// Components w/ JavaScript
+@import "@{bootstrap-path}/modals";
+@import "@{bootstrap-path}/tooltip";
+@import "@{bootstrap-path}/popovers";
+@import "@{bootstrap-path}/carousel";
+
+// Utility classes
+.clearfix {
+  zoom: 1;
+
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after{
+    clear: both;
+  }
+}
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pull-right {
+  float: right !important;
+}
+.pull-left {
+  float: left !important;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block !important;
+}
+.invisible {
+  visibility: hidden;
+}
+.text-hide {
+  overflow:hidden;
+  text-indent:-9000px;
+  display:block;
+}
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+.affix {
+  position: fixed;
+}
+
+@import "@{bootstrap-path}/responsive-utilities";
+
+// Labels
+.label {
+  padding: 2px 4px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+
+  &.label-gray {
+    background-color: #eee;
+    color: #999;
+    text-shadow: none;
+  }
+
+  &.label-inverse {
+    background-color: #333333;
+  }
+}
+
+// Nav tabs
+.nav.nav-tabs {
+  margin-bottom: 15px;
+
+  li {
+    > a {
+      margin-right: 5px;
+      line-height: 20px;
+      border-color: #EEE;
+      color: #888;
+      border-bottom: 1px solid #ddd;
+      .badge {
+        background-color: #eee;
+        color: #888;
+        text-shadow: 0 1px 1px #fff;
+      }
+      i.fa {
+        line-height: 14px;
+      }
+    }
+    &.active {
+      > a {
+        border-color: #CCC;
+        border-bottom: 1px solid #fff;
+        color: #333;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.nav-tabs > li > a,
+.nav-pills > li > a {
+  color: #666;
+}
+
+.nav-pills > .active > a > span > .badge {
+  background-color: #fff;
+  color: @gl-primary;
+}
+
+
+/**
+ * fix to keep tooltips position in top navigation bar
+ *
+ */
+.navbar .nav > li {
+  position: relative;
+  white-space: nowrap;
+}
+
+/**
+ * Add some extra stuff to panels
+ *
+ */
+.panel {
+  .panel-heading {
+    font-weight: bold;
+
+    .panel-head-actions {
+      position: relative;
+      top: -5px;
+      float: right;
+    }
+  }
+
+  .panel-body {
+    form {
+      margin: 0;
+    }
+
+    .form-actions {
+      margin: -15px;
+      margin-top: 18px;
+    }
+  }
+
+  .panel-footer {
+    .pagination {
+      margin: 0;
+    }
+  }
+
+  &.panel-small {
+    .panel-heading {
+      padding: 6px 15px;
+      font-size: 13px;
+      font-weight: normal;
+      a {
+        color: #777;
+      }
+    }
+  }
+}
+
+.panel-succes .panel-heading,
+.panel-info .panel-heading,
+.panel-danger .panel-heading,
+.panel-warning .panel-heading,
+.panel-primary .panel-heading,
+.alert {
+  a:not(.btn) {
+    //.alert-link;
+    color: #fff;
+    text-decoration: underline;
+  }
+}
+
+// Typography =================================================================
+
+.text-primary,
+.text-primary:hover {
+  color: @brand-primary;
+}
+
+.text-success,
+.text-success:hover {
+  color: @brand-success;
+}
+
+.text-danger,
+.text-danger:hover {
+  color: @brand-danger;
+}
+
+.text-warning,
+.text-warning:hover {
+  color: @brand-warning;
+}
+
+.text-info,
+.text-info:hover {
+  color: @brand-info;
+}
+
+// Tables =====================================================================
+
+table.table {
+  .dropdown-menu a {
+    text-decoration: none;
+  }
+
+  .success,
+  .warning,
+  .danger,
+  .info {
+    color: #fff;
+
+    a:not(.btn) {
+      text-decoration: underline;
+      color: #fff;
+    }
+  }
+}

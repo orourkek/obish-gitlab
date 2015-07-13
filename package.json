@@ -7,11 +7,13 @@
   "devDependencies": {
     "less": "latest",
     "less-plugin-clean-css": "latest",
-    "chokidar-cli": "latest"
+    "chokidar-cli": "latest",
+    "twitter-bootstrap-3.0.0": "3.0.0",
+    "nprogress": "latest"
   },
 
   "scripts": {
-    "build-css": "lessc --source-map assets/less/ob-gitlab.less assets/css/ob-gitlab.css",
+    "build-css": "lessc --source-map assets/less/obish-gitlab.less assets/css/obish-gitlab.css",
     "watch-css": "npm run build-css; chokidar assets/less/**/*.less assets/less/*.less -c 'npm run build-css'"
   }
 }
