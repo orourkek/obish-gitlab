@@ -10,4 +10,8 @@
 
   (document.head || document.documentElement).appendChild(link);
 
+  document.addEventListener("DOMContentLoaded", function(event) {
+    document.head.appendChild(link);
+  });
+
 })();
