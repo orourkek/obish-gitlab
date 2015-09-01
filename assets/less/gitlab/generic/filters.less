@@ -4,52 +4,32 @@
 
 .issues-state-filters {
   li.active a {
-    border-color: #DDD !important;
+    border-color: @color-bluescale-6 !important;
 
     &, &:hover, &:active, &.active {
-      background: #f5f5f5 !important;
-      border-bottom: 1px solid #f5f5f5 !important;
+      background: @color-bluescale-6 !important;
+      border-bottom: 1px solid @color-bluescale-6 !important;
     }
   }
 }
 
 .issues-details-filters {
   font-size: 13px;
-  background: #f5f5f5;
+  background: @color-bluescale-6;
   margin: -10px 0;
   padding: 10px 15px;
   margin-top: -15px;
-  border-left: 1px solid #DDD;
-  border-right: 1px solid #DDD;
+  border-left: 1px solid @color-bluescale-6;
+  border-right: 1px solid @color-bluescale-6;
 
   .btn {
     font-size: 13px;
   }
 }
 
-@media (min-width: 800px)  {
-  .issues-filters,
-  .issues_bulk_update {
-    select, .select2-container {
-      width: 120px !important;
-      display: inline-block;
-    }
-  }
-}
-
-@media (min-width: 1200px) {
-  .issues-filters,
-  .issues_bulk_update {
-    select, .select2-container {
-      width: 150px !important;
-      display: inline-block;
-    }
-  }
-}
-
 .issues-filters,
 .issues_bulk_update {
   .select2-container .select2-choice {
-    color: #444 !important;
+    color: white !important;
   }
 }

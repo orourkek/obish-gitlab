@@ -10,7 +10,7 @@
   li {
     padding: 10px 15px;
     min-height: 20px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid @obish-page-subtle-color;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 
     &:after {
@@ -38,8 +38,8 @@
     &.smoke { background-color: @background-color; }
 
     &:hover {
-      background: @hover;
-      border-bottom: 1px solid darken(@hover, 10%);
+      background: @color-bluescale-5;
+      border-bottom: 1px solid @color-bluescale-5;
     }
 
     &:last-child {
@@ -50,7 +50,7 @@
       }
     }
 
-    .author { color: #999; }
+    .author { color: @color-bluescale-10; }
 
     .list-item-name {
       float: left;
@@ -74,10 +74,10 @@
     }
 
     .row_title {
-      color: @gray-dark;
+      color: @obish-text-color;
 
       &:hover {
-        color: @text-color;
+        color: white;
         text-decoration: underline;
       }
     }

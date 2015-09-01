@@ -1,8 +1,10 @@
 /** Select2 selectbox style override **/
 .select2-container, .select2-container.select2-drop-above {
   .select2-choice {
-    background: #FFF;
-    border-color: #DDD;
+    background: @btn-default-bg;
+    border: none;
+    box-shadow: none;
+    color: @btn-default-color;
     height: 34px;
     padding: 6px 14px;
     font-size: 14px;
@@ -11,7 +13,7 @@
     #border-radius(4px);
 
     .select2-arrow {
-      background: #FFF;
+      background: @btn-default-bg;
       border-left: none;
       padding-top: 3px;
     }
@@ -31,7 +33,7 @@
 }
 
 .select2-drop-active {
-  border: 1px solid #BBB !important;
+  border: none !important;
   margin-top: 4px;
   font-size: 13px;
 

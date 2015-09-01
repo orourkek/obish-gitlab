@@ -1,3 +1,217 @@
 
-@import 'obish-variables';
-@import 'gitlab/application';
+@import 'colors';
+@import 'variables';
+
+@import "@{bootstrap-path}/mixins";
+@import "@{bootstrap-path}/normalize";
+@import "@{bootstrap-path}/print";
+@import "@{bootstrap-path}/scaffolding";
+@import "@{bootstrap-path}/type";
+@import "@{bootstrap-path}/code";
+@import "@{bootstrap-path}/grid";
+@import "@{bootstrap-path}/tables";
+@import "@{bootstrap-path}/forms";
+@import "@{bootstrap-path}/buttons";
+@import "@{bootstrap-path}/component-animations";
+@import "@{bootstrap-path}/dropdowns";
+@import "@{bootstrap-path}/button-groups";
+@import "@{bootstrap-path}/input-groups";
+@import "@{bootstrap-path}/navs";
+@import "@{bootstrap-path}/navbar";
+@import "@{bootstrap-path}/breadcrumbs";
+@import "@{bootstrap-path}/pagination";
+@import "@{bootstrap-path}/pager";
+@import "@{bootstrap-path}/labels";
+@import "@{bootstrap-path}/badges";
+@import "@{bootstrap-path}/jumbotron";
+@import "@{bootstrap-path}/thumbnails";
+@import "@{bootstrap-path}/alerts";
+@import "@{bootstrap-path}/progress-bars";
+@import "@{bootstrap-path}/list-group";
+@import "@{bootstrap-path}/wells";
+@import "@{bootstrap-path}/close";
+@import "@{bootstrap-path}/panels";
+@import "@{bootstrap-path}/modals";
+@import "@{bootstrap-path}/tooltip";
+@import "@{bootstrap-path}/popovers";
+@import "@{bootstrap-path}/carousel";
+@import "@{bootstrap-path}/responsive-utilities";
+
+@import 'gitlab/base/variables';
+@import 'gitlab/base/mixins';
+@import 'gitlab/base/layout';
+@import 'gitlab/base/gitlab-bootstrap-overrides';
+
+/*
+@import (less) '@{modules-path}/nprogress/nprogress.css';
+
+@import 'gitlab/@{fontawesome-path}/variables';
+@fa-font-path: 'https://netdna.bootstrapcdn.com/font-awesome/4.2.0/fonts';
+@import 'gitlab/@{fontawesome-path}/mixins.less';
+@import 'gitlab/@{fontawesome-path}/path.less';
+@import 'gitlab/@{fontawesome-path}/core.less';
+@import 'gitlab/@{fontawesome-path}/larger.less';
+@import 'gitlab/@{fontawesome-path}/fixed-width.less';
+@import 'gitlab/@{fontawesome-path}/list.less';
+@import 'gitlab/@{fontawesome-path}/bordered-pulled.less';
+@import 'gitlab/@{fontawesome-path}/spinning.less';
+@import 'gitlab/@{fontawesome-path}/rotated-flipped.less';
+@import 'gitlab/@{fontawesome-path}/stacked.less';
+@import 'gitlab/@{fontawesome-path}/icons.less';
+*/
+
+@import 'gitlab/generic/avatar';
+@import 'gitlab/generic/blocks';
+@import 'gitlab/generic/buttons';
+@import 'gitlab/generic/calendar';
+@import 'gitlab/generic/common';
+@import 'gitlab/generic/files';
+@import 'gitlab/generic/filters';
+@import 'gitlab/generic/flash';
+@import 'gitlab/generic/forms';
+@import 'gitlab/generic/gfm';
+@import 'gitlab/generic/header';
+@import 'gitlab/generic/highlight';
+@import 'gitlab/generic/issue_box';
+@import 'gitlab/generic/jquery';
+@import 'gitlab/generic/lists';
+@import 'gitlab/generic/markdown_area';
+@import 'gitlab/generic/mobile';
+@import 'gitlab/generic/selects';
+@import 'gitlab/generic/sidebar';
+@import 'gitlab/generic/tables';
+@import 'gitlab/generic/timeline';
+@import 'gitlab/generic/typography';
+@import 'gitlab/generic/zen';
+
+@import 'gitlab/pages/admin.less';
+@import 'gitlab/pages/appearances.less';
+@import 'gitlab/pages/commit.less';
+@import 'gitlab/pages/commits.less';
+@import 'gitlab/pages/dashboard.less';
+@import 'gitlab/pages/diff.less';
+@import 'gitlab/pages/editor.less';
+@import 'gitlab/pages/errors.less';
+@import 'gitlab/pages/events.less';
+@import 'gitlab/pages/explore.less';
+@import 'gitlab/pages/graph.less';
+@import 'gitlab/pages/groups.less';
+@import 'gitlab/pages/help.less';
+@import 'gitlab/pages/import.less';
+@import 'gitlab/pages/issuable.less';
+@import 'gitlab/pages/issues.less';
+@import 'gitlab/pages/labels.less';
+@import 'gitlab/pages/login.less';
+@import 'gitlab/pages/merge_requests.less';
+@import 'gitlab/pages/milestone.less';
+@import 'gitlab/pages/note_form.less';
+@import 'gitlab/pages/notes.less';
+@import 'gitlab/pages/notifications.less';
+@import 'gitlab/pages/profile.less';
+@import 'gitlab/pages/projects.less';
+@import 'gitlab/pages/search.less';
+@import 'gitlab/pages/snippets.less';
+@import 'gitlab/pages/stat_graph.less';
+@import 'gitlab/pages/tree.less';
+@import 'gitlab/pages/ui_dev_kit.less';
+@import 'gitlab/pages/votes.less';
+@import 'gitlab/pages/wiki.less';
+
+@import 'gitlab/highlight/dark';
+@import 'gitlab/highlight/monokai';
+@import 'gitlab/highlight/solarized_dark';
+@import 'gitlab/highlight/solarized_light';
+@import 'gitlab/highlight/white';
+
+@import 'gitlab/behaviors';
+
+
+//
+// Below is the obish gitlab theme. It replaces the usual theme files (ui_mars,
+// ui_gray, etc) with a single theme: obish.
+//
+// Rules were copied from the `#gitlab-theme` mixin
+//
+.ui_basic,
+.ui_color,
+.ui_gray,
+.ui_mars,
+.ui_modern {
+  //#gitlab-theme(white; @color-bluescale-15; @color-bluescale-1; @color-bluescale-4);
+  //#gitlab-theme(@color-light, @color, @color-darker, @color-dark) {
+
+  header {
+    &.navbar-gitlab {
+      .app_logo {
+        background-color: @obish-sidebar-bg;
+
+        a {
+          color: @obish-sidebar-link-color;
+        }
+
+        &:hover {
+          background-color: @obish-sidebar-link-hover-bg;
+
+          a {
+            color: @obish-sidebar-link-hover-color;
+          }
+        }
+      }
+    }
+  }
+
+  body&,
+  .content-wrapper {
+    background: @background-color;
+  }
+
+  .page-with-sidebar {
+    background: @obish-page-bg;
+
+    .collapse-nav a {
+      color: #FFF;
+      background: rgba(255, 255, 255, .1);
+    }
+
+    .sidebar-wrapper {
+      background: @obish-sidebar-bg;
+      border-right: 1px solid @obish-sidebar-bg;
+    }
+
+    .nav-sidebar li {
+      a {
+        color: @obish-sidebar-link-color;
+
+        &:hover, &:focus, &:active {
+          background: @obish-sidebar-link-hover-bg;
+        }
+
+        i {
+          color: @obish-sidebar-link-color;
+        }
+
+        .count {
+          color: @obish-sidebar-link-color;
+          background: rgba(255, 255, 255, .1);
+        }
+      }
+
+      &.separate-item {
+        border-top: 1px solid rgba(255, 255, 255, .1);
+      }
+
+      &.active a {
+        color: #FFF;
+        font-weight: bold;
+
+        &.no-highlight {
+          border: none;
+        }
+
+        i {
+          color: #FFF;
+        }
+      }
+    }
+  }
+}

@@ -1,52 +1,3 @@
-/*
- * Twitter bootstrap with GitLab customizations/additions
- *
- */
-
-// Core variables and mixins
-@import "@{bootstrap-path}/variables";
-@import 'gl_variables';
-@import "@{bootstrap-path}/mixins";
-
-// Reset
-@import "@{bootstrap-path}/normalize";
-@import "@{bootstrap-path}/print";
-
-// Core CSS
-@import "@{bootstrap-path}/scaffolding";
-@import "@{bootstrap-path}/type";
-@import "@{bootstrap-path}/code";
-@import "@{bootstrap-path}/grid";
-@import "@{bootstrap-path}/tables";
-@import "@{bootstrap-path}/forms";
-@import "@{bootstrap-path}/buttons";
-
-// Components
-@import "@{bootstrap-path}/component-animations";
-@import "@{bootstrap-path}/dropdowns";
-@import "@{bootstrap-path}/button-groups";
-@import "@{bootstrap-path}/input-groups";
-@import "@{bootstrap-path}/navs";
-@import "@{bootstrap-path}/navbar";
-@import "@{bootstrap-path}/breadcrumbs";
-@import "@{bootstrap-path}/pagination";
-@import "@{bootstrap-path}/pager";
-@import "@{bootstrap-path}/labels";
-@import "@{bootstrap-path}/badges";
-@import "@{bootstrap-path}/jumbotron";
-@import "@{bootstrap-path}/thumbnails";
-@import "@{bootstrap-path}/alerts";
-@import "@{bootstrap-path}/progress-bars";
-@import "@{bootstrap-path}/list-group";
-@import "@{bootstrap-path}/wells";
-@import "@{bootstrap-path}/close";
-@import "@{bootstrap-path}/panels";
-
-// Components w/ JavaScript
-@import "@{bootstrap-path}/modals";
-@import "@{bootstrap-path}/tooltip";
-@import "@{bootstrap-path}/popovers";
-@import "@{bootstrap-path}/carousel";
 
 // Utility classes
 .clearfix {
@@ -93,7 +44,7 @@
   position: fixed;
 }
 
-@import "@{bootstrap-path}/responsive-utilities";
+//@import "@{bootstrap-path}/responsive-utilities";
 
 // Labels
 .label {
@@ -116,29 +67,27 @@
 
 // Nav tabs
 .nav.nav-tabs {
-  margin-bottom: 15px;
+  border: none;
 
   li {
     > a {
-      margin-right: 5px;
-      line-height: 20px;
-      border-color: #EEE;
-      color: #888;
-      border-bottom: 1px solid #ddd;
-      .badge {
-        background-color: #eee;
-        color: #888;
-        text-shadow: 0 1px 1px #fff;
+      border: none !important;
+      color: @color-bluescale-8;
+
+      &:hover {
+        border: none;
+        color: @color-bluescale-12;
       }
-      i.fa {
-        line-height: 14px;
+
+      .badge {
+        background-color: rgba(255, 255, 255, .1);
+        color: @gray-light;
+        text-shadow: none;
       }
     }
     &.active {
       > a {
-        border-color: #CCC;
-        border-bottom: 1px solid #fff;
-        color: #333;
+        color: white;
         font-weight: bold;
       }
     }
@@ -147,7 +96,7 @@
 
 .nav-tabs > li > a,
 .nav-pills > li > a {
-  color: #666;
+  color: @color-bluescale-8;
 }
 
 .nav-pills > .active > a > span > .badge {

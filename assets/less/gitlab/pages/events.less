@@ -43,7 +43,8 @@
   }
 
   padding: 12px 0px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid @hr-border;
+
   .event-title {
     max-width: 70%;
     #str-truncated(calc(100% - 174px));
@@ -57,25 +58,17 @@
     font-size: 13px;
     margin-left: 35px;
     margin-right: 80px;
-    color: #777;
+    color: @color-bluescale-9;
 
     .event-note {
       margin-top: 5px;
       word-wrap: break-word;
 
-      .md {
-        font-size: 13px;
-
-        iframe.twitter-share-button {
-          vertical-align: bottom;
-        }
-      }
-
       pre {
         border: none;
-        background: #f9f9f9;
+        background: @color-bluescale-8;
         border-radius: 0;
-        color: #777;
+        color: white;
         margin: 0 20px;
         overflow: hidden;
       }
@@ -142,7 +135,7 @@
 
   .event-item-timestamp {
     float: right;
-    color: #999;
+    color: @color-bluescale-9;
     line-height: 22px;
   }
 }
